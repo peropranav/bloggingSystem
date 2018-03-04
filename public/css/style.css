@@ -1,0 +1,33 @@
+textarea
+{
+    
+    width: 100%;
+    border: solid #2a3b6e;
+}
+
+h1
+{
+
+    font-family: monospace;
+    margin-top: 2%;
+    text-align: center;
+    color: #2a3b6e;
+}
+
+
+span
+{
+    font-size: 30px;
+    color: #2a3b6e;
+
+}
+
+select
+{
+    height: 30px;
+    width: 100px;
+    color: #2a3b6e;
+    border: solid #2a3b6e;
+    color: #2a3b6e;
+
+}
