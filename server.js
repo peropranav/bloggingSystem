@@ -11,11 +11,20 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.set('view engine', 'ejs');
 
-var main=require('./routes/main.js');
+var general=require('./routes/general.js');
+var mba=require('./routes/mba.js');
+var food=require('./routes/food.js');
+var btech=require('./routes/btech.js');
+
+
 var addBlog=require('./routes/blog.js');
 
 app.set('views', path.join(__dirname, 'views'));
-app.use('/',main);
+app.use('/general',general);
+app.use('/mba',mba);
+app.use('/btech',btech);
+app.use('/food',food);
+
 app.use('/addBlog',addBlog);
 
 

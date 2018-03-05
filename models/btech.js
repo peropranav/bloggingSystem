@@ -10,6 +10,10 @@ var btechBlog = new Schema({
         {
             type:String
         },
+    writtenBy:
+        {
+            type:String
+        },
     likes:
         {
             type:Number

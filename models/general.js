@@ -10,6 +10,10 @@ var generalBlog = new Schema({
         {
 type:String
         },
+    writtenBy:
+        {
+            type:String
+        },
     likes:
         {
             type:Number

@@ -18,7 +18,7 @@ router.get('/',function (req,res) {
 
 router.post('/', function (req,res) {
 
-    console.log(req.body);
+    //console.log(req.body);
 //conditon to save to which collection
 
     if(req.body.genre==='MBA')
@@ -29,6 +29,7 @@ router.post('/', function (req,res) {
 
             title: req.body.title,
             content: req.body.content,
+            writtenBy:req.body.writtenBy,
             genre: req.body.genre
 
 
@@ -59,6 +60,7 @@ var newBtechBlog= new btechBlog({
 
     title: req.body.title,
     content: req.body.content,
+    writtenBy:req.body.writtenBy,
     genre: req.body.genre
 
 
@@ -88,6 +90,7 @@ var newBtechBlog= new btechBlog({
 
             title: req.body.title,
             content: req.body.content,
+            writtenBy:req.body.writtenBy,
             genre: req.body.genre
 
 
@@ -118,6 +121,7 @@ var newBtechBlog= new btechBlog({
 
             title: req.body.title,
             content: req.body.content,
+            writtenBy:req.body.writtenBy,
             genre: req.body.genre
 
 

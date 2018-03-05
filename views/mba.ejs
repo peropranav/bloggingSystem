@@ -12,180 +12,9 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
     <link rel="icon" href="../images/ourLogo.jpg" type="image/gif" sizes="22x22">
-    <link rel="stylesheet" href="../css/style.css">
-
-    <title>Add Blog</title>
+    <link rel="stylesheet" href="../css/ejsPages.css">
+    <title>COMMITGURU</title>
 </head>
-<style>
-    .footer-distributed{
-        background-color: #2a3b6e;
-        box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
-        box-sizing: border-box;
-        width: 100%;
-        text-align: left;
-        font: bold 16px sans-serif;
-
-        padding: 55px 50px;
-        margin-top: 80px;
-    }
-
-    .footer-distributed .footer-left,
-    .footer-distributed .footer-center,
-    .footer-distributed .footer-right{
-        display: inline-block;
-        vertical-align: top;
-    }
-
-    /* Footer left */
-
-    .footer-distributed .footer-left{
-        width: 40%;
-    }
-
-    /* The company logo */
-
-    .footer-distributed h3{
-        color:  #ffffff;
-        font: normal 36px 'Cookie', cursive;
-        margin: 0;
-    }
-
-    .footer-distributed h3 span{
-        color:  white;
-    }
-
-    /* Footer links */
-
-    .footer-distributed .footer-links{
-        color:  #ffffff;
-        margin: 20px 0 12px;
-        padding: 0;
-    }
-
-    .footer-distributed .footer-links a{
-        display:inline-block;
-        line-height: 1.8;
-        text-decoration: none;
-        color:  inherit;
-    }
-
-    .footer-distributed .footer-company-name{
-        color:  #8f9296;
-        font-size: 14px;
-        font-weight: normal;
-        margin: 0;
-    }
-
-    /* Footer Center */
-
-    .footer-distributed .footer-center{
-        width: 35%;
-    }
-
-    .footer-distributed .footer-center i{
-        background-color:  #33383b;
-        color: #ffffff;
-        font-size: 25px;
-        width: 38px;
-        height: 38px;
-        border-radius: 50%;
-        text-align: center;
-        line-height: 42px;
-        margin: 10px 15px;
-        vertical-align: middle;
-    }
-
-    .footer-distributed .footer-center i.fa-envelope{
-        font-size: 17px;
-        line-height: 38px;
-    }
-
-    .footer-distributed .footer-center p{
-        display: inline-block;
-        color: #ffffff;
-        vertical-align: middle;
-        margin:0;
-    }
-
-    .footer-distributed .footer-center p span{
-        display:block;
-        font-weight: normal;
-        font-size:14px;
-        line-height:2;
-    }
-
-    .footer-distributed .footer-center p a{
-        color:  #5383d3;
-        text-decoration: none;;
-    }
-
-
-    /* Footer Right */
-
-    .footer-distributed .footer-right{
-        width: 20%;
-    }
-
-    .footer-distributed .footer-company-about{
-        line-height: 20px;
-        color:  #92999f;
-        font-size: 13px;
-        font-weight: normal;
-        margin: 0;
-    }
-
-    .footer-distributed .footer-company-about span{
-        display: block;
-        color:  #ffffff;
-        font-size: 14px;
-        font-weight: bold;
-        margin-bottom: 20px;
-    }
-
-    .footer-distributed .footer-icons{
-        margin-top: 25px;
-    }
-
-    .footer-distributed .footer-icons a{
-        display: inline-block;
-        width: 35px;
-        height: 35px;
-        cursor: pointer;
-        background-color:  #33383b;
-        border-radius: 2px;
-
-        font-size: 20px;
-        color: #ffffff;
-        text-align: center;
-        line-height: 35px;
-
-        margin-right: 3px;
-        margin-bottom: 5px;
-    }
-
-    /* If you don't want the footer to be responsive, remove these media queries */
-
-    @media (max-width: 880px) {
-
-        .footer-distributed{
-            font: bold 14px sans-serif;
-        }
-
-        .footer-distributed .footer-left,
-        .footer-distributed .footer-center,
-        .footer-distributed .footer-right{
-            display: block;
-            width: 100%;
-            margin-bottom: 40px;
-            text-align: center;
-        }
-
-        .footer-distributed .footer-center i{
-            margin-left: 0;
-        }
-
-    }
-</style>
 <body>
 
 <!-- .navbar start -->
@@ -237,6 +66,14 @@
                 <a class="nav-link" href="#"  style="color: whitesmoke;font-weight: 500;">Mentors</a>
             </li>
 
+            <li class="nav-item">
+                <a class="nav-link" href="/addBlog"  style="color: whitesmoke;font-weight: 500;">Add Blog</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#"  style="color: whitesmoke;font-weight: 500;">Register As Mentor</a>
+            </li>
+
+
         </ul>
         <ul class="navbar-nav ml-auto">
             <li class="nav-item">
@@ -249,85 +86,37 @@
     </div>
 </nav>
 <!-- /.navbar -->
+<br>
 
 <div class="container">
-<form action="/addBlog" method="post">
     <div class="row">
+        <%var n=result.length%>
 
-        <div class="col-12 col-xs-12">
-            <h1>What's On Your Mind Today</h1>
+        <% for(var i=0;i<n;i++){ %>
+        <div class="col-lg-4 col-12" style="margin-top: 2%">
+            <div style="background-color: antiquewhite;height: 200px;">
 
+                <p style="font-size: 40px; text-align: center"><%=result[i].title%></p>
 
-
+            </div>
+            <div style="background-color:#2a3b6e">
+                <span style="color: white;font-size: 20px;">MBA</span> <span style="color: white;float: right;font-size: 15px;margin-right: 1%;margin-top: 1%">Written By:<%=result[i].writtenBy%></span>
+            </div>
         </div>
 
-    </div>
 
-
-
-    <div class="row">
-        <div class="col">
-
-          <textarea placeholder="Title" name="title"></textarea>
-
-        </div>
-    </div>
-
-<br>
-
-    <div class="row">
-        <div class="col">
-
-            <textarea placeholder="Written By" name="writtenBy"></textarea>
-
-        </div>
-    </div>
-
-<br>
-
-    <div class="row">
-        <div class="col-12 col-lg-6">
-<span>Genre:</span> &nbsp;
-           <select name="genre">
-               <option >MBA</option>
-               <option>B.Tech</option>
-               <option>Food</option>
-
-               <option>General</option>
-
-           </select>
-
-        </div>
-    </div>
-
-<br>
-
-
-    <div class="row">
-        <div class="col">
-
-            <textarea placeholder="Write Something Here..." style="height: 400px;" name="content"></textarea>
-
-        </div>
-    </div>
-
-
-<div class="row">
-<div class="col-3 col-lg-10">
-</div>
-
-    <div class="col-6 col-lg-2">
-
-<button class="btn btn-primary" type="submit">Submit Your Blog</button>
+        <%}%>
 
     </div>
+
+
 
 
 
 </div>
 
-</form>
-</div>
+
+
 <footer class="footer-distributed" style="margin-top:10px;">
     <div class="footer-left">
         <h3>COMMIT<span>-GURU</span></h3>
@@ -373,7 +162,6 @@
         </div>
     </div>
 </footer>
-
 
 </body>
 </html>
