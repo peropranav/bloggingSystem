@@ -89,24 +89,20 @@
 
 <div class="container">
     <div class="row">
-        <%var n=result.length%>
 
-        <% for(var i=0;i<n;i++){ %>
-         <div class="col-lg-4 col-12" style="margin-top: 2%" >
-           <a href="/btech/<%=result[i]._id%>"> <div style="background-color: antiquewhite;height: 200px;">
+        <div class="col-lg-12 col-12" style="margin-top: 2%" >
+            <div style="background-color: antiquewhite">
 
-                <p style="font-size: 40px; text-align: center"><%=result[i].title%>  </p>
+                    <p style="font-size: 20px; text-align: center"><%=result.content%>  </p>
 
-            </div>
+                </div>
 
 
-         </a>
             <div style="background-color:#2a3b6e">
-                <span style="color: white;font-size: 20px;">B.Tech</span> <span style="color: white;float: right;font-size: 15px;margin-right: 1%;margin-top: 1%">Written By:<%=result[i].writtenBy%></span>
+                <span style="color: white;font-size: 20px;">B.Tech</span> <span style="color: white;float: right;font-size: 20px;margin-right: 1%;">Written By:<%=result.writtenBy%></span>
             </div>
         </div>
 
-        <%}%>
 
     </div>
 

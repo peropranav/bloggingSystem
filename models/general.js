@@ -14,6 +14,10 @@ type:String
         {
             type:String
         },
+    id:
+        {
+
+        },
     likes:
         {
             type:Number

@@ -14,6 +14,10 @@ var foodBlog = new Schema({
         {
             type:String
         },
+    id:
+        {
+
+        },
     likes:
         {
             type:Number

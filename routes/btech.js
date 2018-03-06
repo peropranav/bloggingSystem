@@ -17,6 +17,23 @@ router.get('/',function (req,res) {
 })
 
 
+router.get('/:id',function (req,res) {
+
+    console.log(req.params.id)
+    btechDoc.findById({_id: req.params.id}, function (err, result) {
+        if (err) {
+            console.log("Some fucking error occured" + err)
+        }
+        else {
+            console.log(result)
+            res.render('btechFull.ejs', {result: result})
+        }
+
+
+    })
+
+});
+
 
 
 

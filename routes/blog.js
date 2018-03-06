@@ -91,7 +91,8 @@ var newBtechBlog= new btechBlog({
             title: req.body.title,
             content: req.body.content,
             writtenBy:req.body.writtenBy,
-            genre: req.body.genre
+            genre: req.body.genre,
+
 
 
         })

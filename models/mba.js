@@ -14,6 +14,10 @@ var mbaBlog = new Schema({
         {
           type:String
         },
+    id:
+        {
+
+        },
     likes:
         {
             type:Number
