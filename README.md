@@ -4,7 +4,7 @@ Blogs for all. Blogging system on node js.
 
 Blogging for all B.Tech, Mba and foodies, save your blog and get featured.
 
-![Alt Text](https://media.giphy.com/media/vFKqnCdLPNOKc/giphy.gif)
+![Alt Text](https://github.com/peropranav/bloggingSystem/blob/master/giphy.gif)
 
 
 ## How To Run
