@@ -11,6 +11,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Coiny" rel="stylesheet">
     <link rel="icon" href="../images/ourLogo.jpg" type="image/gif" sizes="22x22">
     <link rel="stylesheet" href="../css/ejsPages.css">
     <title>COMMITGURU</title>
@@ -93,15 +94,18 @@
 
         <% for(var i=0;i<n;i++){ %>
          <div class="col-lg-4 col-12" style="margin-top: 2%" >
-           <a href="/btech/<%=result[i]._id%>"> <div style="background-color: antiquewhite;height: 200px;">
+          <div style="background-color:seashell;height: 200px;">
 
-                <p style="font-size: 40px; text-align: center"><%=result[i].title%>  </p>
+              <p style="font-size: 40px; text-align: center;font-family: 'Coiny', cursive;padding: 7%"><%=result[i].title%>  </p>
 
             </div>
 
 
-         </a>
+
+
+
             <div style="background-color:#2a3b6e">
+                <a href="/btech/<%=result[i]._id%>"> <button class="btn btn-primary" style="float: right">Click to Read Full</button> </a> <br><br>
                 <span style="color: white;font-size: 20px;">B.Tech</span> <span style="color: white;float: right;font-size: 15px;margin-right: 1%;margin-top: 1%">Written By:<%=result[i].writtenBy%></span>
             </div>
         </div>
@@ -118,7 +122,7 @@
 
 
 
-
+<br><br><br> <br>
 
 
 <footer class="footer-distributed" style="margin-top:10px;">
