@@ -8,7 +8,18 @@ var generalBlog=require('../models/general.js')
 
 const publicPath = path.join(__dirname, '../public');
 
-router.get('/',function (req,res) {
+
+function ensureAuthenticated(req, res, next){
+    if(req.isAuthenticated()){
+        return next();
+    } else {
+    res.redirect('auth/facebook')
+
+    }
+
+
+}
+router.get('/',ensureAuthenticated,function (req,res) {
 
 
     res.sendFile( publicPath + '/html/addBlog.html')

@@ -1,6 +1,32 @@
 const  router=require('express').Router();
 var btechDoc=require('../models/btech')
-router.get('/',function (req,res) {
+
+
+var i;
+function ensureAuthenticated(req, res, next){
+    if(req.isAuthenticated()){
+        i=0;
+        next();
+
+    }
+
+
+
+    //not logged in
+
+    else {
+
+        i=10;
+        console.log("not logged in");
+        next();
+
+    }
+
+
+}
+
+router.get('/',ensureAuthenticated,function (req,res) {
+
 
     btechDoc.find({},function (err,result) {
 
@@ -10,11 +36,26 @@ router.get('/',function (req,res) {
         }
         else
         {
-            res.render('btech.ejs',{result:result}) }
+            if(i==10)  //not logged in
+            {
+                result.checker="notlogIn"
+
+                res.render('btech.ejs',{result:result})
+
+            }
+
+            if(i==0)   //logged in
+            {
+                result.checker="logIn"
+                res.render('btech.ejs',{result:result})
+
+            }
+
+        }
 
     })
-
 })
+
 
 
 router.get('/:id',function (req,res) {
@@ -31,9 +72,7 @@ router.get('/:id',function (req,res) {
 
 
     })
-
-});
-
+})
 
 
 

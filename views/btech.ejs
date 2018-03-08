@@ -79,9 +79,24 @@
             <li class="nav-item">
                 <a class="nav-link"style="color: whitesmoke"></a>
             </li>
+
+
+            <%if(result.checker=="notlogIn"){%>
+
             <li class="nav-item">
-                <a class="nav-link " href="#" style="color: whitesmoke;font-weight: 500;">Login <i class="fa fa-sign-in" aria-hidden="true"></i></a>
+                <a class="nav-link " href="/auth/facebook"  style="color: whitesmoke;font-weight: 500;">Login <i class="fa fa-sign-in" aria-hidden="true"></i></a>
             </li>
+
+            <%}%>
+            <%if(result.checker=="logIn"){%>
+            <li class="nav-item">
+                <a class="nav-link " href="/logout"  style="color: whitesmoke;font-weight: 500;">Logout <i class="fa fa-sign-in" aria-hidden="true"></i></a>
+            </li>
+
+
+            <%}%>
+
+
         </ul>
     </div>
 </nav>

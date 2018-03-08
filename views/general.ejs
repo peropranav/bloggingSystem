@@ -81,15 +81,31 @@
             <li class="nav-item">
                 <a class="nav-link"style="color: whitesmoke"></a>
             </li>
+
+            <%if(result.checker=="notlogIn"){%>
+
             <li class="nav-item">
-                <a class="nav-link " href="#" style="color: whitesmoke;font-weight: 500;">Login <i class="fa fa-sign-in" aria-hidden="true"></i></a>
+                <a class="nav-link " href="/auth/facebook"  style="color: whitesmoke;font-weight: 500;">Login <i class="fa fa-sign-in" aria-hidden="true"></i></a>
             </li>
+
+            <%}%>
+            <%if(result.checker=="logIn"){%>
+            <li class="nav-item">
+                <a class="nav-link " href="/logout"  style="color: whitesmoke;font-weight: 500;">Logout <i class="fa fa-sign-in" aria-hidden="true"></i></a>
+            </li>
+
+
+            <%}%>
+
+
+
         </ul>
     </div>
 </nav>
 <!-- /.navbar -->
 <br>
 
+<br>
 <div class="container">
     <div class="row">
         <%var n=result.length%>
@@ -102,6 +118,8 @@
 
             </div>
             <div style="background-color:#2a3b6e">
+                <a href="/general/<%=result[i]._id%>"> <button class="btn btn-primary" style="float: right">Click to Read Full</button> </a> <br><br>
+
                 <span style="color: white;font-size: 20px;">GENERAL</span> <span style="color: white;float: right;font-size: 15px;margin-right: 1%;margin-top: 1%">Written By:<%=result[i].writtenBy%></span>
             </div>
         </div>
